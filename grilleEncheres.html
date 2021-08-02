@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Liste enchéres de STAMPEE" />
+    <meta name="author" content="Amin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./assets/styles/utility.css" />
+    <link rel="stylesheet" href="./assets/styles/header.css" />
+    <link rel="stylesheet" href="./assets/styles/buttons.css" />
+    <link rel="stylesheet" href="./assets/styles/cards.css" />
+    <link rel="stylesheet" href="./assets/styles/footer.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo/logo_sur_bleu.png"
+      type="image/x-icon"
+    />
+    <title>Liste enchéres</title>
+    <script type="module" src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container flex">
+        <div class="logo">
+          <img src="./assets/img/logo/logo_sur_blanc.png" alt="logo" />
+        </div>
+
+        <div class="search-container">
+          <div class="search">
+            <input type="text" />
+            <button>Chercher</button>
+          </div>
+        </div>
+        <div class="menu-nav-btn">
+          <input type="checkbox" class="hamburger-check" />
+          <div class="hamburger-frame">
+            <div class="hamburger-btn"></div>
+          </div>
+        </div>
+      </div>
+      <nav class="hidden nav">
+        <div class="nav-container">
+          <ul>
+            <li>Connexion</li>
+            <li>Portail des Enchéres</li>
+            <li>À propos</li>
+            <li>Encyclopédie</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="research-container">
+        <div class="request-container request-container-left">
+          <span class="hide-filter" data-js-filterIn>&#171;</span>
+          <form>
+            <div class="filter-div">
+              <p>Pays d'origine</p>
+              <select id="country" data-js-select="country">
+                <option value="">Tout les pays</option>
+              </select>
+            </div>
+            <div class="filter-div">
+              <p for="category">Catégorie</p>
+              <select id="category" data-js-select="category">
+                <option value="">Toutes les Catégories</option>
+              </select>
+            </div>
+            <div class="filter-div">
+              <div class="filter-title">
+                <p>Prix</p>
+              </div>
+              <div>
+                <input type="checkbox" id="under5" />
+                <label for="under5"> Moins de 5$</label>
+              </div>
+              <div>
+                <input type="checkbox" id="to49" />
+                <label for="to49"> De 5$ à 49$ </label>
+              </div>
+              <div>
+                <input type="checkbox" id="over50" />
+                <label for="over50"> 50$ et plus</label>
+              </div>
+            </div>
+            <div class="filter-div">
+              <div class="filter-title">
+                <p>Montrer seulement</p>
+              </div>
+              <div>
+                <input type="checkbox" id="active" />
+                <label for="active"> Ventes actives</label>
+              </div>
+              <div>
+                <input type="checkbox" id="expired" />
+                <label for="expired"> Ventes expirées </label>
+              </div>
+              <div>
+                <input type="checkbox" id="authentic" />
+                <label for="authentic"> Authenticité guarantie</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="grid-container">
+          <div class="grid-options flex flex-justify-space">
+            <div class="options">
+              <img
+                class="nav-btn"
+                data-js-filter
+                src="./assets/img/icon/menu1.png"
+                alt="menu"
+              />
+            </div>
+            <div class="options">
+              <div class="grid-option">
+                <select>
+                  <option value="">Pértinence</option>
+                  <option value="">Prix croissant</option>
+                  <option value="">Prix décroissant</option>
+                  <option value="">Fin</option>
+                </select>
+                <img
+                  class="nav-btn"
+                  src="./assets/img/icon/grille.png"
+                  alt="menu"
+                />
+                <img
+                  class="nav-btn"
+                  src="./assets/img/icon/liste.png"
+                  alt="menu"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="auctions-grid" data-js-grid>
+            <!--  carte -->
+            <!-- <div
+              class="
+                auction-card2
+                shadow
+                flex
+                column
+                flex-items-center flex-justfy-center
+              "
+            >
+              <div class="img-container">
+                <img src="./assets/img/stamp0.png" alt="Exemple timbre" />
+              </div>
+              <div class="auction-desc flex column">
+                <div class="auction-title">
+                  <h3 class="auction-title2">
+                    LOT # 181 - Pokemon Cards CHARIZARD
+                  </h3>
+                  <p>Mise actuelle: 152,00 USD</p>
+                  <h4>Temps restant: <span>3d 23h 39m</span></h4>
+                </div>
+                <div class="auction-cta flex flex-justfy-center">
+                  <button class="btn btn-cta margin-bot">Enchérir</button>
+                  <button class="btn btn-main">&#x2764;</button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <div>
+          <h3>Liens utiles</h3>
+          <ul>
+            <li>Connexion</li>
+            <li>Portail des Enchéres</li>
+            <li>À propos</li>
+            <li>Encyclopédie</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Aide et support</h3>
+          <ul>
+            <li>Lord Reginald Stampee</li>
+            <li>Détails livraison et paiement</li>
+            <li>Politique et térmes</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Suivre le Lord</h3>
+          <div class="social">
+            <img src="./assets/img/icon/1.png" alt="social" />
+            <img src="./assets/img/icon/2.png" alt="social" />
+            <img src="./assets/img/icon/3.png" alt="social" />
+            <img src="./assets/img/icon/4.png" alt="social" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

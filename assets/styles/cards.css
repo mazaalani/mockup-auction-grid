@@ -1,0 +1,61 @@
+.card-container {
+  height: 480px;
+}
+.auction-card2 {
+  height: 100%;
+  position: relative;
+}
+
+.auction-card2 .img-container {
+  padding: 1rem;
+}
+
+.auction-card2 .auction-cta {
+  margin: 1rem;
+}
+
+.auction-card2 .auction-title {
+  text-align: center;
+}
+
+.auction-card2 .btn-main {
+  padding: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.img-container {
+  width: 150px;
+}
+
+.img-container:hover,
+.auction-title h3:hover {
+  cursor: pointer;
+}
+
+.auction-title {
+  margin: 1rem;
+}
+
+.auction-title2 {
+  margin-bottom: 2rem;
+}
+
+.auction-title h4 {
+  margin-top: 1rem;
+}
+
+.red {
+  color: var(--clr-red);
+}
+
+[data-js-ad] {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  color: var(--clr-red);
+  border: 2px solid var(--clr-red);
+  padding: calc(var(--margin-s) / 2);
+  border-radius: 4px;
+  font-weight: 700;
+  transform: rotate(-25deg);
+}

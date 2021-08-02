@@ -1,0 +1,37 @@
+footer {
+  clear: both;
+  background-color: var(--clr-gray);
+  padding: 8vh 5vw;
+}
+
+footer > div {
+  display: grid;
+  text-align: center;
+  margin: 0 0 0 5vw;
+  text-align: left;
+}
+
+footer > div > div {
+  margin-left: var(--margin-s);
+  margin-top: var(--margin-s);
+}
+footer > div > div:last-of-type {
+  text-align: center;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer h3 + * {
+  margin-bottom: var(--margin-s);
+}
+
+footer h3 {
+  margin-bottom: var(--margin-s);
+}
+
+.social img {
+  width: 30px;
+  display: inline-block;
+}

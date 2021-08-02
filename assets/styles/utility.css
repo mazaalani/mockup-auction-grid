@@ -1,0 +1,36 @@
+.shadow {
+  border-radius: 6px;
+  box-shadow: 3px 3px 20px -3px var(--clr-border);
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-justfy-center {
+  justify-content: center;
+}
+
+.flex-justify-space {
+  justify-content: space-between;
+}
+
+.flex-items-center {
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}

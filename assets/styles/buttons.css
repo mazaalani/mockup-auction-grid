@@ -1,0 +1,118 @@
+/* boutons des menus options */
+.nav-btn {
+  background: var(--clr-gray);
+  padding: 3px;
+  border: 2px solid var(--clr-border);
+}
+.nav-btn:hover,
+.nav-btn:focus {
+  background: var(--clr-border);
+  cursor: pointer;
+}
+/* bouton du menu hamburger */
+.hamburger-frame {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger-check {
+  height: 40px;
+  width: 40px;
+  margin-right: -40px;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hamburger-btn {
+  position: relative;
+  width: 70%;
+  height: 4px;
+  background: var(--clr-blue);
+}
+
+.hamburger-btn::before,
+.hamburger-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  z-index: 1;
+  background: inherit;
+  top: -10px;
+}
+.hamburger-btn::after {
+  top: 10px;
+}
+.hamburger-frame:hover .hamburger-btn,
+.hamburger-frame:focus .hamburger-btn,
+.hamburger-check:checked + .hamburger-frame .hamburger-btn {
+  height: 0;
+}
+
+.hamburger-frame:hover .hamburger-btn::before,
+.hamburger-frame:focus .hamburger-btn::before,
+.hamburger-check:checked + .hamburger-frame .hamburger-btn::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.hamburger-frame:hover .hamburger-btn::after,
+.hamburger-frame:focus .hamburger-btn::after,
+.hamburger-check:checked + .hamburger-frame .hamburger-btn::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.hide-filter {
+  float: right;
+  border: 1px solid;
+  padding: 2px 5px;
+  margin-right: var(--margin-s);
+  margin-top: 10px;
+}
+.hide-filter:hover {
+  font-weight: 900;
+  border-width: 2px;
+  cursor: pointer;
+}
+/* boutons CTA*/
+.btn {
+  padding: 0.7rem 3rem;
+  font-family: var(--font-fam-main);
+  font-weight: 700;
+  font-size: 18px;
+  border: 0.2rem solid;
+  border-radius: 4px;
+}
+
+.btn-main {
+  border-color: var(--clr-blue);
+  background-color: var(--clr-white);
+  color: var(--clr-blue);
+}
+
+.btn-main:hover {
+  border-color: var(--clr-blue);
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn-cta {
+  border-color: var(--clr-red);
+  background-color: var(--clr-red);
+  color: var(--clr-white);
+}
+
+.btn-cta:hover {
+  border-color: var(--clr-red);
+  background-color: var(--clr-white);
+  color: var(--clr-red);
+  opacity: 0.9;
+  transition: 0.3s;
+  cursor: pointer;
+}

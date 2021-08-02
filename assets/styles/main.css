@@ -1,0 +1,208 @@
+/* Fait en version mobile en premier */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow */
+:root {
+  --clr-content-bg: white;
+  --clr-border: #dddddd;
+  --clr-sec-text: #8b8b8b;
+  --clr-white: #ffffff;
+  --clr-red: #ca261a;
+  --clr-blue: #004990;
+  --clr-black: #001931;
+  --clr-gray: #eeeeee;
+
+  --margin-s: 20px;
+  --margin-m: 50px;
+  --margin-l: 80px;
+  --margin-s-neg: -20px;
+  --margin-m-neg: -50px;
+  --margin-l-neg: -80px;
+  --sidebar-width: 240px;
+  --sidebar-width-neg: -240px;
+
+  --ff-title: "Playfair Display SC", serif;
+  --ff-txt: "Merriweather", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-txt);
+  color: var(--clr-black);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-title);
+}
+
+img {
+  width: 100%;
+}
+/* 
+.request-container {
+  max-width: 250px;
+} */
+/* main de la page contenant la grille d'enchéres  */
+.research-container {
+  padding: calc(var(--margin-s) / 2);
+  margin-left: 2vw;
+}
+/* div contenant les filtres */
+.request-container {
+  width: 220px;
+  float: left;
+  border: 2px solid var(--clr-gray);
+  margin-right: var(--margin-s);
+  margin-top: var(--margin-m);
+  transition: all 0.2s ease-out;
+}
+
+.request-container-left {
+  /* hors ecran en bas de 540px */
+  margin-left: var(--sidebar-width-neg);
+}
+
+.request-container form {
+  background: var(--clr-white);
+  padding: calc(var(--margin-s) / 2);
+}
+
+.request-container form p {
+  font-weight: 700;
+}
+
+.request-container form select {
+  padding: 5px;
+  border: 2px solid var(--clr-gray);
+}
+
+.request-container form > div > *:not([type="checkbox"], label) {
+  display: block;
+}
+
+.request-container form > div:not(:first-of-type) {
+  margin-top: var(--margin-s);
+}
+
+.request-container form > div > *:not(:first-child) {
+  margin-top: calc(var(--margin-s) / 2);
+}
+/* div contenant les cartes d'enchéres */
+
+.grid-container {
+  z-index: -1;
+  width: min(95%, 1365px);
+  float: left;
+  margin-bottom: var(--margin-l);
+  transition: all 0.2s ease-in-out;
+}
+
+.auctions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
+  gap: var(--margin-s);
+}
+
+.grid-options {
+  padding: var(--margin-s) 0;
+}
+
+.grid-options img {
+  width: 30px;
+}
+
+.options img + img {
+  margin-left: 3px;
+}
+
+.options img {
+  vertical-align: middle;
+}
+
+.options select {
+  display: inline-block;
+  background: var(--clr-gray);
+  padding: 5px 0;
+  border: 2px solid var(--clr-border);
+}
+
+.grid-options > div:nth-child(2) .nav-btn {
+  display: none;
+}
+
+@media (min-width: 612px) {
+  .request-container {
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .hide-filter {
+    display: none;
+  }
+
+  .grid-container {
+    width: calc(95% - var(--sidebar-width));
+  }
+
+  footer > div {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    margin: auto;
+    text-align: center;
+  }
+
+  [data-js-filter] {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .auctions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  }
+  /*menu */
+  .nav-container .menu-nav-btn {
+    display: none;
+  }
+
+  header .nav {
+    display: block;
+    border-top: 2px solid var(--clr-border);
+    border-bottom: 2px solid var(--clr-border);
+    z-index: 2;
+  }
+
+  header nav .nav-container {
+    margin: var(--margin-s) auto;
+    padding: 0 calc(var(--margin-s) / 4);
+  }
+
+  header nav .nav-container li {
+    margin-top: 0;
+  }
+
+  .nav-container > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+  }
+
+  nav .nav-container li::after {
+    left: 25%;
+  }
+}
+
+/* class pour js boutons */
+.request-out {
+  margin-left: 0;
+}
+
+.grid-go-left {
+  width: 110%;
+  float: none;
+}

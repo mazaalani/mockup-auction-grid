@@ -1,0 +1,97 @@
+/* Fait en version mobile en premier */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow */
+:root {
+  --clr-content-bg: white;
+  --clr-border: #dddddd;
+  --clr-sec-text: #8b8b8b;
+  --clr-white: #ffffff;
+  --clr-red: #ca261a;
+  --clr-blue: #004990;
+  --clr-black: #001931;
+  --clr-gray: #eeeeee;
+
+  --margin-s: 20px;
+  --marging-m: 50px;
+  --margin-l: 80px;
+
+  --ff-title: "Playfair Display SC", serif;
+  --ff-txt: "Merriweather", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-txt);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-title);
+}
+
+img {
+  width: 100%;
+}
+/* 
+.request-container {
+  max-width: 250px;
+} */
+/* main de la page contenant la grille d'enchéres  */
+.research-container {
+  display: flex;
+  padding: calc(var(--margin-s) / 2);
+}
+
+.request-container {
+  width: 220px;
+  /* hors ecran en bas de 540px */
+  margin-left: -200px;
+  padding-right: 25px;
+}
+
+.request-container form {
+  background: var(--clr-white);
+  padding: calc(var(--margin-s) / 2);
+}
+
+.grid-container {
+  /* pour donner visibilité a la div des filtres quand affichée */
+  z-index: -1;
+  width: min(95%, 1365px);
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-flow: row;
+}
+/* div contenant les filtres */
+
+/* div contenant les cartes d'enchéres */
+.auctions-grid {
+  padding: var(--margin-s);
+}
+.grid-options {
+  padding: var(--margin-s);
+}
+.grid-options img {
+  width: 25px;
+}
+.options img + img {
+  margin-left: 3px;
+}
+
+@media (min-width: 540px) {
+  .request-container {
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .hide-filter {
+    display: none;
+  }
+}
